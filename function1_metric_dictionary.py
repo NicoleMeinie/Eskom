@@ -3,6 +3,7 @@ def metric_dictionary(lists):
   """ This function takes in a list of integers and returns a dictionary of the mean, median, variance, standard deviation, min and max.
       Answers are rounded to the second decimal 
   """
+  """
   lists.sort()
 
   minimum = round(min(lists),2)
@@ -23,4 +24,6 @@ def metric_dictionary(lists):
   else:
     median = round(lists[len(lists)//2],2)
 
-  return {'min': minimum, 'max': maximum, 'mean': mean, 'median': median, 'std': standard_deviation, 'var': variance} 
+  return {'min': minimum, 'max': maximum, 'mean': mean, 'median': median, 'std': standard_deviation, 'var': variance}
+  """
+  return ({'Mean':round(np.mean(items),2),'Median':np.median(items),'Maximum':np.max(items),'Minimum':np.min(items),'Variance':round(np.var(items,ddof=1),2),'Standard Deviation':round(np.std(items,ddof=1),2)})
